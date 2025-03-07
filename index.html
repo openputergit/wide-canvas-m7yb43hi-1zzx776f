@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widecanvas Updates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ed1c24',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .brick-pattern {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+                            linear-gradient(90deg, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+            background-size: 20px 20px;
+            background-color: #77b5d9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-auto" src="https://firebasestorage.googleapis.com/v0/b/widecanvas-d0dd4.appspot.com/o/logos%2FFULL%20LOGO%20TRANSPARENT-01.png?alt=media&token=3607af49-98f0-4088-9c2d-0b807c68c8c0" alt="Widecanvas Logo">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section with Brick Pattern -->
+        <section class="brick-pattern min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
+                <h1 class="text-3xl font-bold text-primary mb-6 text-center">Welcome to Widecanvas</h1>
+                <p class="text-gray-600 mb-8 text-center">Experience the future of web development with our innovative platform.</p>
+                
+                <!-- Call to Action Buttons -->
+                <div class="space-y-4">
+                    <button class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300 flex items-center justify-center">
+                        <i class="bi bi-rocket-takeoff me-2"></i>
+                        Get Started
+                    </button>
+                    <button class="w-full border-2 border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition duration-300 flex items-center justify-center">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2024 Widecanvas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add button click animations
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
